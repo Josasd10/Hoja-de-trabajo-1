@@ -18,6 +18,17 @@ public class FMRadio implements BandaRadio {
         estacionActual = Math.round(estacionActual * 10.0) / 10.0;
     }
 
+
+    @Override
+    public void regresarEstacion() {
+        estacionActual -= 0.2;
+        if (estacionActual < 87.9) {
+            estacionActual = 107.9;
+        }
+        // Redondear a un decimal para evitar demasiados números
+        estacionActual = Math.round(estacionActual * 10.0) / 10.0;
+    }
+
     @Override
     public void guardarEstacion(int boton) {
         botones[boton - 1] = estacionActual;
@@ -33,3 +44,5 @@ public class FMRadio implements BandaRadio {
         return estacionActual;
     }
 }
+
+

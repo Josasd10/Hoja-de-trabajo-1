@@ -15,6 +15,16 @@ public class AMRadio implements BandaRadio {
             estacionActual = 530;
         }
     }
+  
+    
+
+    @Override
+    public void regresarEstacion() {
+        estacionActual -= 10;
+        if (estacionActual < 530) {
+            estacionActual = 1610;
+        }
+    }
 
     @Override
     public void guardarEstacion(int boton) {

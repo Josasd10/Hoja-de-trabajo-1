@@ -31,6 +31,13 @@ public class RadioImpl implements Radio {
     }
 
     @Override
+    public void regresarEstacion() {
+        if (encendido) {
+            bandaActual.regresarEstacion();
+        }
+    }
+
+    @Override
     public void guardarEstacion(int numeroBoton) {
         if (encendido) {
             bandaActual.guardarEstacion(numeroBoton);

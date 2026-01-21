@@ -4,6 +4,7 @@ public interface Radio {
     void apagarRadio();
 
     void avanzarEstacion();
+    void regresarEstacion();
 
     void guardarEstacion(int numeroBoton);
     void cargarEstacion(int numeroBoton);
@@ -11,3 +12,6 @@ public interface Radio {
     void cambiarFM();
     void cambiarAM();
 }
+
+
+

@@ -31,6 +31,7 @@ public class RadioGUI extends JFrame {
         JButton btnAM = new JButton("AM");
         JButton btnFM = new JButton("FM");
         JButton btnAvanzar = new JButton("Avanzar");
+        JButton btnRegresar = new JButton("Regresar");
         JButton btnGuardar = new JButton("Guardar");
         JButton btnCargar = new JButton("Cargar");
 
@@ -39,6 +40,7 @@ public class RadioGUI extends JFrame {
         panelBotones.add(btnAM);
         panelBotones.add(btnFM);
         panelBotones.add(btnAvanzar);
+        panelBotones.add(btnRegresar);
         panelBotones.add(btnGuardar);
         panelBotones.add(btnCargar);
 
@@ -69,6 +71,11 @@ public class RadioGUI extends JFrame {
 
         btnAvanzar.addActionListener(e -> {
             radio.avanzarEstacion();
+            actualizarEstacion();
+        });
+
+        btnRegresar.addActionListener(e -> {
+            radio.regresarEstacion();
             actualizarEstacion();
         });
 
